@@ -1,7 +1,7 @@
 
 Face Recognize with React,Node,Clarifai,postgresql
 
-![Twitter](https://github.com/hassonor/react-robots/blob/master/demo.png)
+![Twitter](https://github.com/hassonor/ai-face-recognize-/blob/master/demo.png)
 
 1. Clone this repo
 2. Run `npm install` both FE and BE.
