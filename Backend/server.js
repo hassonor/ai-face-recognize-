@@ -11,27 +11,12 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
+
 const db = knex({
   // connect to your own database here:
   client: 'pg',
-  connection: {
-    host : process.env.DB_HOST,
-    user : process.env.DB_USER,
-    password : process.env.DB_PASSWORD,
-    database : process.env.DB_NAME,
-    port: 5432
-  }
+  connection: process.env.POSTGRESS_URI
 });
-
-/*
-Create .env file and update the vars
-CLARIFAI_KEY=
-DB_HOST=127.0.0.1
-DB_USER=
-DB_PASSWORD=
-DB_NAME=
-DB_PORT=5432
- */
 
 const app = express();
 
