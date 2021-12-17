@@ -94,6 +94,7 @@ class App extends Component {
     }
 
     calculateFaceLocation = (data) => {
+        if (data === undefined) return;
         const image = document.getElementById('inputimage');
         const width = Number(image.width);
         const height = Number(image.height);
@@ -113,10 +114,13 @@ class App extends Component {
     }
 
     onInputChange = (event) => {
+        if (event.target.value === "") return;
         this.setState({input: event.target.value});
     }
 
     onButtonSubmit = () => {
+
+        if (this.state.input === "") return;
         this.setState({imageUrl: this.state.input});
         fetch('http://localhost:3000/imageurl', {
             method: 'post',
