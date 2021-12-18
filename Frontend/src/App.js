@@ -114,6 +114,7 @@ class App extends Component {
     }
 
     onInputChange = (event) => {
+
         if (event.target.value === "") return;
         this.setState({input: event.target.value});
     }
